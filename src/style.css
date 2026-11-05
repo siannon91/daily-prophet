@@ -11,6 +11,7 @@ body {
   color: #2b2013;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: 0;
   padding: 20px;
 }
@@ -22,6 +23,7 @@ body {
   padding: 30px;
   background: #f4ecd8;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin: auto;
 }
 
 header h1 {
@@ -79,3 +81,35 @@ header h1 {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
+
+.wanted-card {
+  border: 2px solid #4a3b2c;
+  background-color: #fdfaf2;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 0 #4a3b2c;
+}
+
+.wanted-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #2b2013;
+  color: #f4ecd8;
+  padding: 5px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.wizard-name {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 2px 0 7px 0;
+  color: #7f2216;
+}
+
+.muggle-name {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
