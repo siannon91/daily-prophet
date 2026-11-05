@@ -42,3 +42,40 @@ header h1 {
   border-bottom: 1px solid #4a3b2c;
   padding: 5px 10px;
 }
+
+.ministry-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: #eadecc;
+  padding: 15px;
+  border: 1px solid #4a3b2c;
+}
+
+.search-box {
+  flex: 1;
+  padding: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  border: 2px solid #4a3b2c;
+  background-color: #fbf7ee;
+  color: #2b2013;
+}
+
+.search-box:focus {
+  outline: none;
+  box-shadow: 0 0 5px #7f2216;
+}
+
+#status-indicator {
+  text-align: center;
+  font-weight: bold;
+  color: #7f2216;
+  margin-bottom: 20px;
+}
+
+.bounty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
