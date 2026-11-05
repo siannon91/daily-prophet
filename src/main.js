@@ -1,7 +1,7 @@
 import './style.css';
 import { ENDPOINTS } from './config';
 import { hentData } from './api';
-import { visKort } from './dom';
+import { visKort, visMelding } from './dom';
 import { lagEttersokte } from './mapper';
 import { filtrerEttersokte } from './filter';
 import { lyttTilSok } from './events';
@@ -18,6 +18,12 @@ async function start() {
   lyttTilSok((sokeord) => {
     const resultat = filtrerEttersokte(ettersokte, sokeord);
     visKort(resultat);
+
+    if (resultat.length === 0) {
+      visMelding('No dark wizards found matching those parameters.');
+    } else {
+      visMelding('');
+    }
   });
 }
 

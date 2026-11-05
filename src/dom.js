@@ -1,4 +1,5 @@
 const bountyBoard = document.getElementById('bounty-board');
+const statusIndicator = document.getElementById('status-indicator');
 
 function lagKort(person) {
     return `
@@ -24,4 +25,8 @@ function lagKort(person) {
 export function visKort(liste) {
     const kortHTML = liste.map(lagKort).join('');
     bountyBoard.innerHTML = kortHTML;
+}
+
+export function visMelding(tekst) {
+    statusIndicator.textContent = tekst;
 }
