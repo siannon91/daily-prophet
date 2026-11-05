@@ -1,4 +1,4 @@
-import axios from 'axios';
+import './style.css';
 import { ENDPOINTS } from './config';
 import { hentData } from './api';
 
