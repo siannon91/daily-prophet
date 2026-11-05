@@ -52,6 +52,9 @@ header h1 {
   background: #eadecc;
   padding: 15px;
   border: 1px solid #4a3b2c;
+  max-width: 1000px;
+  min-width: 1000px;
+  margin: auto;
 }
 
 .search-box {
@@ -125,4 +128,18 @@ header h1 {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: #555;
+}
+
+.spell-box {
+  margin-top: 15px;
+  background-color: #f1ebd9;
+  border: 1px solid #4a3b2c;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.spell-text {
+  font-weight: bold;
+  color: #2c5e3b;
 }
