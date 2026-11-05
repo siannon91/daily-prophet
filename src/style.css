@@ -74,6 +74,13 @@ header h1 {
   font-weight: bold;
   color: #7f2216;
   margin-bottom: 20px;
+  background-color: #fbe9e5;
+  border: 2px solid #7f2216;
+  padding: 12px;
+}
+
+#status-indicator:empty {
+  display: none;
 }
 
 .bounty-grid {
@@ -88,6 +95,13 @@ header h1 {
   padding: 20px;
   text-align: center;
   box-shadow: 5px 5px 0 #4a3b2c;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.wanted-card:hover {
+  transform: translateY(-5px);
 }
 
 .wanted-title {
@@ -119,6 +133,7 @@ header h1 {
   text-align: left;
   font-size: 0.85rem;
   line-height: 1.4;
+  flex-grow: 1;
 }
 
 .details-box strong {
@@ -139,4 +154,11 @@ header h1 {
 .spell-text {
   font-weight: bold;
   color: #2c5e3b;
+}
+
+.dark-mark img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
 }

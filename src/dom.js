@@ -5,6 +5,7 @@ function lagKort(person) {
     return `
     <div class="wanted-card">
         <div class="wanted-title">Wanted</div>
+        <div class="dark-mark"><img src="${import.meta.env.BASE_URL}img/mm.jpg" alt="Dark Mark" /></div>
         <div class="wizard-name">${person.trollmannNavn}</div>
         <div class="muggle-name"><strong>Muggle Alias:</strong> ${person.mugglerNavn}</div>
 
