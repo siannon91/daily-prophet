@@ -4,13 +4,18 @@ function lagKort(person) {
     return `
     <div class="wanted-card">
         <div class="wanted-title">Wanted</div>
-        <div class="wizard-name">${person.username}</div>
-        <div class="muggle-name"><strong>Muggle Alias:</strong> ${person.name}</div>
+        <div class="wizard-name">${person.trollmannNavn}</div>
+        <div class="muggle-name"><strong>Muggle Alias:</strong> ${person.mugglerNavn}</div>
 
         <div class="details-box">
-            <div><strong>Last Known Location:</strong> ${person.address.city}</div>
-            <div><strong>Ministry Case ID:</strong> ${person.address.zipcode}</div>
-            <div><strong>Dark Magic Radar:</strong> Lat ${person.address.geo.lat} / Lng ${person.address.geo.lng}</div>
+            <div><strong>Last Known Location:</strong> ${person.by}</div>
+            <div><strong>Ministry Case ID:</strong> ${person.saksId}</div>
+            <div><strong>Dark Magic Radar:</strong> Lat ${person.breddegrad} / Lng ${person.lengdegrad}</div>
+
+            <div class="spell-box">
+                <strong>Binding Counter-Spell:</strong><br />
+                <span class="spell-text">${person.formel}!</span>
+            </div>    
         </div>
     </div>
     `;

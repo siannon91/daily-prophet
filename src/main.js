@@ -2,6 +2,7 @@ import './style.css';
 import { ENDPOINTS } from './config';
 import { hentData } from './api';
 import { visKort } from './dom';
+import { lagEttersokte } from './mapper';
 
 async function start() {
   const [brukere, oppgaver] = await Promise.all([
@@ -9,8 +10,8 @@ async function start() {
     hentData(ENDPOINTS.todos),
   ]);
 
-  console.log(oppgaver);
-  visKort(brukere);
+  const ettersokte = lagEttersokte(brukere, oppgaver);
+  visKort(ettersokte);
 }
 
 start();
