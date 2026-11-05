@@ -1,13 +1,10 @@
 import axios from 'axios';
+import { ENDPOINTS } from './config';
+import { hentData } from './api';
 
-async function hentBrukere(params) {
-  try {
-    const respons = await axios.get('https://jsonplaceholder.typicode.com/users');
-    console.log('Statuskode:', respons.status);
-    console.log(respons.data);
-  } catch (error) {
-    console.error('Noe gikk galt:', feil.message);
-  }
-  
+async function start() {
+  const brukere = await hentData(ENDPOINTS.users);
+  console.log(brukere);
 }
-hentBrukere();
+
+start();
