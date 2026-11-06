@@ -1,3 +1,5 @@
+// alt det som endres i DOM ligger her
+
 const bountyBoard = document.getElementById('bounty-board');
 const statusIndicator = document.getElementById('status-indicator');
 
@@ -27,6 +29,7 @@ function lagKort(person, erFanget) {
     `;
 }
 
+// tegner alle kortene på siden
 export function visKort(liste, fangede = []) {
     const kortHTML = liste
         .map((person) => lagKort(person, fangede.includes(person.id)))

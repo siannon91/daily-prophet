@@ -1,7 +1,12 @@
+// gjør rå API data om til vårt eget format
+
 const STANDARD_FORMEL = 'Impedimenta';
 
+// tar imot lister (to endepunkt) og returnerer en liste med våre objekter, ett per bruker
 export function lagEttersokte(brukere, oppgaver) {
+    // .map() lager en ny liste med ett nytt objekt per bruker 
     return brukere.map((bruker) => {
+        // find() gir den første som passer, eller undefined hvis ingen finnes.
         const oppgave = oppgaver.find((o) => o.userId === bruker.id);
         return {
             id: bruker.id,
