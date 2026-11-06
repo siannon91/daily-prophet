@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/daily-prophet/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Daily Prophet</title>
-    <script type="module" crossorigin src="/daily-prophet/assets/index-BXyJ9W1M.js"></script>
-    <link rel="stylesheet" crossorigin href="/daily-prophet/assets/index-Czm_AQCb.css">
+    <script type="module" crossorigin src="/daily-prophet/assets/index-CQO1Dtdg.js"></script>
+    <link rel="stylesheet" crossorigin href="/daily-prophet/assets/index-CG-yTkwV.css">
   </head>
   <body>
 
@@ -20,15 +20,25 @@
           <span>Price: 5 Knuts</span>
         </div>
       </header>
-    </div>
+   
 
     <div class="ministry-controls">
       <input type="text" id="auror-search" class="search-box" placeholder="⚡ Search by Wizard Name or Muggle Alias...">
+      <div class="status-filters">
+        <button class="filter-btn active" data-status="all">All</button>
+        <button class="filter-btn" data-status="captured">Captured</button>
+        <button class="filter-btn" data-status="free">Still at large</button>
+      </div>
     </div>
 
     <main id="bounty-board" class="bounty-grid"></main>
 
     <div id="status-indicator"></div>
+
+    <footer class="paper-footer">
+      <p>Printed by the Ministry of Magic</p>
+    </footer>
+    </div>
 
   </body>
 </html>
