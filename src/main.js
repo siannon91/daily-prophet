@@ -3,8 +3,8 @@ import { ENDPOINTS } from './config';
 import { hentData } from './api';
 import { visKort, visMelding } from './dom';
 import { lagEttersokte } from './mapper';
-import { filtrerEttersokte } from './filter';
-import { lyttTilSok, lyttTilFangst } from './events';
+import { filtrerEttersokte, filtrerEtterStatus } from './filter';
+import { lyttTilSok, lyttTilFangst, lyttTilStatus } from './events';
 import { hentFangede, byttFanget } from './storage';
 
 async function start() {
@@ -17,9 +17,11 @@ async function start() {
     const ettersokte = lagEttersokte(brukere, oppgaver);
     let gjeldendeSok = '';
     let fangede = hentFangede();
+    let gjeldendeStatus = 'all';
 
     function oppdaterVisning() {
-      const resultat = filtrerEttersokte(ettersokte, gjeldendeSok);
+      const sokt = filtrerEttersokte(ettersokte, gjeldendeSok);
+      const resultat = filtrerEtterStatus(sokt, gjeldendeStatus, fangede);
       visKort(resultat, fangede);
 
       if (resultat.length === 0) {
@@ -33,6 +35,11 @@ async function start() {
     
     lyttTilSok((sokeord) => {
       gjeldendeSok = sokeord;
+      oppdaterVisning();
+    });
+
+    lyttTilStatus((status) => {
+      gjeldendeStatus = status;
       oppdaterVisning();
     });
 

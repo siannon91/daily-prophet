@@ -12,3 +12,15 @@ export function filtrerEttersokte(liste, sokeord) {
         );
     });
 }
+
+// filtrerer liste etter status: all, captured eller free.
+export function filtrerEtterStatus(liste, status, fangede) {
+    if (status === 'captured') {
+        return liste.filter ((person) => fangede.includes(person.id));
+
+    }
+    if (status === 'free') {
+        return liste.filter((person) => !fangede.includes(person.id));
+    }
+    return liste;
+}
