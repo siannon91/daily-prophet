@@ -5,7 +5,7 @@ export function hentFangede() {
         const tekst = localStorage.getItem(NOKKEL);
         return tekst ? JSON.parse(tekst) : [];
     } catch (feil) {
-        console.error('Kunne ikke lese fra localStorage:' feil.message);
+        console.error('Kunne ikke lese fra localStorage:', feil.message);
         return [];
     }
 }

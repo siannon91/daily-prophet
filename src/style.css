@@ -166,3 +166,32 @@ header h1 {
   height: auto;
   margin: 10px 0;
 }
+
+.capture-btn {
+  margin-top: 15px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #2b2013;
+  cursor: pointer;
+}
+
+.capture-btn:hover {
+  background-color: #7f2216;
+  border-color: black;
+}
+
+.wanted-card.captured {
+  background-color: #e3ecd9;
+  border-color: #2c5e3b;
+}
+
+.wanted-card.captured .wanted-title {
+  background-color: #2c5e3b;
+}
+
+.wanted-card.captured .capture-btn {
+  background-color: #2c5e3b;
+  border-color: #2c5e3b;
+}

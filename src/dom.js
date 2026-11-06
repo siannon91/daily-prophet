@@ -1,9 +1,9 @@
 const bountyBoard = document.getElementById('bounty-board');
 const statusIndicator = document.getElementById('status-indicator');
 
-function lagKort(person) {
+function lagKort(person, erFanget) {
     return `
-    <div class="wanted-card">
+    <div class="wanted-card ${erFanget ? 'captured' : ''}">
         <div class="wanted-title">Wanted</div>
         <div class="dark-mark"><img src="${import.meta.env.BASE_URL}img/mm.jpg" alt="Dark Mark" /></div>
         <div class="wizard-name">${person.trollmannNavn}</div>
@@ -19,12 +19,18 @@ function lagKort(person) {
                 <span class="spell-text">${person.formel}!</span>
             </div>    
         </div>
+
+        <button class="capture-btn" data-id="${person.id}">
+            ${erFanget ? 'Captured ✓' : 'Mark as captured'}
+        </button>
     </div>
     `;
 }
 
-export function visKort(liste) {
-    const kortHTML = liste.map(lagKort).join('');
+export function visKort(liste, fangede = []) {
+    const kortHTML = liste
+        .map((person) => lagKort(person, fangede.includes(person.id)))
+        .join('');
     bountyBoard.innerHTML = kortHTML;
 }
 
