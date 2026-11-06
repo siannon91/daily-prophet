@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(/img/newspaper.jpg);
+  background-image: url(/img/sfondo.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -117,15 +117,28 @@ header h1 {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-15deg);
   padding: 4px 16px;
-  border: 4px solid #7f2216;
-  color: #7f2216;
+  border: 4px solid #ff1e00;
+  color: #ff1e00;
+  background-color: #000000ca;
   font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
   opacity: 0.85;
   pointer-events: none;
+  /*animation: stamp-in 0.1s ease-out;*/
 }
+/*
+@keyframes stamp-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-15deg) scale(2);
+  }
+  to {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) rotate(-15deg) scale(1);
+  }
+}*/
 
 .wanted-title {
   font-size: 1.8rem;
@@ -187,13 +200,15 @@ header h1 {
 }
 
 .capture-btn {
-  margin-top: 15px;
+  margin-top: auto;
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+  font-size: 1rem;
   text-transform: uppercase;
   background-color: #2b2013;
   cursor: pointer;
+  color: #e3ecd9;
 }
 
 .capture-btn:hover {
@@ -240,3 +255,15 @@ header h1 {
   background: #2b2013;
   color: #f4ecd8;
 }
+
+.paper-footer {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 5px double #4a3b2c;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  background: #eadecc;
+} 
