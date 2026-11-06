@@ -10,6 +10,7 @@ A small web app styled as a wizarding newspaper. It shows a "wanted" board of De
 - Fetches data from two endpoints (`/users` and `/todos`) with Axios
 - Combines the two lists: each user gets the title of their first todo as a "binding counter-spell"
 - Live search by wizard name, Muggle alias or city
+- Filter by status: all, captured or still at large (combines with the search)
 - Mark wanted people as captured. The choice is saved in `localStorage` and remembered after reloading
 - Network status codes are logged to the console, and errors are shown to the user
 

@@ -103,10 +103,28 @@ header h1 {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
+  position: relative;
 }
 
 .wanted-card:hover {
   transform: translateY(-5px);
+}
+
+.wanted-card.captured::after {
+  content: 'Captured';
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  padding: 4px 16px;
+  border: 4px solid #7f2216;
+  color: #7f2216;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.85;
+  pointer-events: none;
 }
 
 .wanted-title {
